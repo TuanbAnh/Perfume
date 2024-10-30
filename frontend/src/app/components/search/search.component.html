@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="head">
+    <img
+      class="lazy img-responsive"
+      src="https://www.thegioinuochoa.com.vn/uploads/manual/banner/2024/thang_7/banner-outlet-store.png"
+      alt=""
+      data-original="https://www.thegioinuochoa.com.vn/uploads/manual/banner/2024/thang_7/banner-outlet-store.png"
+      style="display: inline-block"
+    />
+    <img
+      style="margin: 0px auto"
+      src="https://www.thegioinuochoa.com.vn/uploads/manual/banner/2024/thang_7/w-outlet-store.png"
+      data-original="https://www.thegioinuochoa.com.vn/uploads/manual/banner/2024/thang_7/w-outlet-store.png"
+      class="lazy img-responsive"
+    />
+  </div>
+  <div class="body">
+    <div class="contents">
+      <div class="item" *ngFor="let list of perfumeList">
+        <img src="{{ list.img }}" alt="" />
+        <h3>{{ list.name }}</h3>
+        <div class="items">
+          <span>{{ list.perfume_type }}</span
+          >-
+          <span>{{ list.origin }}</span>
+        </div>
+        <strong>{{ list.price }}</strong>
+      </div>
+    </div>
+  </div>
+</div>

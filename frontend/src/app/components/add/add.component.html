@@ -1,0 +1,112 @@
+<div class="container mt-4">
+  <div class="card">
+    <h1>Nhập thông tin</h1>
+
+    <form class="label">
+      <div class="form-group">
+        <label> Tên sản phẩm</label>
+        <input
+          type="text"
+          [(ngModel)]="name"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="name"
+          placeholder="..."
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Giá</label>
+        <input
+          type="text"
+          [(ngModel)]="price"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="price"
+          placeholder="..."
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Loại</label>
+        <input
+          type="text"
+          [(ngModel)]="perfume_type"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="perfume_type"
+          placeholder="..."
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Xuất xứ</label>
+        <input
+          type="text"
+          [(ngModel)]="origin"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="origin"
+          placeholder="..."
+        />
+      </div>
+
+      <div class="form-group">
+        <label>Ảnh</label>
+        <input
+          type="text"
+          [(ngModel)]="img"
+          [ngModelOptions]="{ standalone: true }"
+          class="form-control"
+          id="img"
+          placeholder="..."
+        />
+      </div>
+
+      <button type="submit" class="btn btn-primary mt-4" (click)="save()">
+        Save
+      </button>
+    </form>
+  </div>
+
+  <div class="container mt-5">
+    <h1>Danh sách</h1>
+    <table class="table">
+      <thead class="th">
+        <h1 *ngIf="!isResultLoaded">Đang tải.................</h1>
+        <tr>
+          <th scope="col">Tên sản phẩm</th>
+          <th scope="col">Giá</th>
+          <th scope="col">Kiểu</th>
+          <th scope="col">Xuất xứ</th>
+          <th scope="col">Sản phẩm</th>
+        </tr>
+      </thead>
+      <tbody class="tb">
+        <tr *ngFor="let StudentItem of StudentArray">
+          <td>{{ StudentItem.name }}</td>
+          <td>{{ StudentItem.price }}</td>
+          <td>{{ StudentItem.perfume_type }}</td>
+          <td>{{ StudentItem.origin }}</td>
+          <td><img src="{{ StudentItem.img }}" alt="" /></td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-success"
+              (click)="setUpdate(StudentItem)"
+            >
+              Edit
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="setDelete(StudentItem)"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

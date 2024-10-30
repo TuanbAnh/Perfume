@@ -1,0 +1,115 @@
+<div class="main">
+  <div class="header">
+    <div class="header-title">
+      HỆ THỐNG PHÂN PHỐI NƯỚC HOA & MỸ PHẨM CHÍNH HÃNG HÀNG ĐẦU VIỆT NAM VỚI 50
+      CỬA HÀNG TRÊN TOÀN QUỐC
+    </div>
+    <div class="header-content">
+      <img
+        src="https://www.thegioinuochoa.com.vn/uploads/manual/logo/TGNH.jpg"
+        alt=""
+        class="logo"
+      />
+      <div class="header-left">
+        <div class="search">
+          <input
+            [(ngModel)]="sea"
+            type="text"
+            class="search-tetx"
+            placeholder="Bạn muốn tìm theo tên Sản phẩm hoặc Xuất xứ ?"
+          />
+          <button (click)="search()" class="btn-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+        <div class="head-acout">
+          <strong class="strong">Tài khoản</strong>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="head-left-nav">
+        <div class="list-par">
+          <div class="list-chill">
+            <i class="fa-solid fa-bars"></i>
+            <div class="item">DANH MỤC</div>
+            <i class="fa-solid fa-sort-down"></i>
+          </div>
+          <ul class="ul">
+            <li [routerLink]="['/home/Add']">Thêm sản phẩm</li>
+            <li [routerLink]="['/home/Origin']">Danh sách sản phẩm</li>
+            <li [routerLink]="['']">Thoát</li>
+          </ul>
+        </div>
+
+        <div [routerLink]="['/home/Product']" class="head-left-item">COMBO</div>
+        <div [routerLink]="['/home/Male']" class="head-left-item">
+          NƯỚC HOA NAM
+        </div>
+        <div [routerLink]="['/home/Female']" class="head-left-item">
+          NƯỚC HOA NỮ
+        </div>
+        <div [routerLink]="['/home/Origin']" class="head-left-item">TẤT CẢ</div>
+      </div>
+
+      <div class="head-right-nav">
+        <div class="rl left">
+          <i class="fa-solid fa-phone"></i>
+          <div class="hotline">
+            <p>Đặt hàng: (8h - 22h )</p>
+            <strong>19001234</strong>
+          </div>
+        </div>
+        <div class="rl right">
+          <i class="fa-solid fa-phone"></i>
+          <div class="hotline">
+            <p>CSKH: T2 - T6 (8h - 22h)</p>
+            <strong>19006789</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="fotter">
+    <div class="foter-title">
+      <h2>Giới thiệu</h2>
+      <p class="item">Giới thiệu về TGNH</p>
+      <p class="item">Quan điểm kinh doanh</p>
+      <p class="item">Bản quyền & Sở hữu</p>
+    </div>
+    <div class="foter-title">
+      <h2>Chính Sách Công Ty</h2>
+      <p class="item">Điều khoản sử dụng</p>
+      <p class="item">Chính sách bảo mật thông tin</p>
+      <p class="item">Chính sách bảo hành</p>
+      <p class="item">Chính sách đổi trả</p>
+      <p class="item">Nhượng Quyền Thương Hiệu</p>
+    </div>
+    <div class="foter-title">
+      <h2>Trợ giúp</h2>
+      <p class="item">Hướng dẫn sử dụng nước hoa</p>
+      <p class="item">Hướng dẫn mua hàng</p>
+      <p class="item">Phương thức thanh toán</p>
+      <p class="item">Gói quà miễn phí</p>
+    </div>
+    <div class="foter-title">
+      <h2>Thông tin khác</h2>
+      <p class="item">Hoạt động TGNH</p>
+      <p class="item">Member Card</p>
+      <p class="item">Gift Voucher</p>
+      <p class="item">Tuyển dụng</p>
+    </div>
+    <div class="foter-title">
+      <h2>Liên Hệ</h2>
+      <p class="item">Hệ thống showroom</p>
+      <p class="item">Liên hệ</p>
+    </div>
+  </div>
+</div>

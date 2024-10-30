@@ -1,0 +1,71 @@
+@import "../../main.scss";
+
+.main {
+  padding-bottom: 50px;
+  background-color: $hongphan4;
+
+  .top {
+    .img-top {
+      width: 100%;
+    }
+  }
+
+  .body {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px;
+    background-color: $hongphan4;
+
+    .conten-body {
+      color: $xanh1;
+      text-align: center;
+      border: 2px solid $xanh1;
+      border-radius: 10px;
+      width: 40%;
+      .note {
+        margin-bottom: 5px;
+      }
+      .avt {
+        width: 90%;
+      }
+      .note2 {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .bottom {
+    .content-bottom {
+      .setqua-img {
+        display: block;
+        margin: 0 auto;
+        width: 70%;
+      }
+
+      .back {
+        display: flex;
+        justify-content: center;
+        .par-content-bottom {
+          padding: 15px;
+          border: 2px solid #1100ff;
+          border-radius: 10px;
+          width: 80%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          gap: 50px 0;
+          .item {
+            width: 20%;
+            border: 2px solid $xanh1;
+            border-radius: 10px;
+
+            &:hover {
+              cursor: pointer;
+              transform: translateY(-5px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
