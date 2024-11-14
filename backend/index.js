@@ -10,7 +10,7 @@ const app = express();
 const PORT = process.env.PORT || 4200;
 
 const corsOptions = {
-  origin: "http://localhost:14554",
+  origin: "http://localhost:4200",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
